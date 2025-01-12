@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dw726tqw138hx"]
+
+[ext_resource type="Shader" path="res://addons/npc_camera/ViewArea.gdshader" id="1_4vtl5"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_p7w7v"]
+shader = ExtResource("1_4vtl5")
+shader_parameter/angle = 45.0
+shader_parameter/near_color = Color(0, 0.4, 0.8, 1)
+shader_parameter/far_color = Color(0, 0.4, 0.8, 0.125)
+
+[node name="ViewArea" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_p7w7v")
+offset_right = 40.0
+offset_bottom = 40.0
